@@ -21,8 +21,8 @@ export const DrawerLayout: React.FC<PropsWithChildren> = ({ children }) => {
           <Header />
           <Grid container spacing={2} flexGrow={1} mt={0.5}>
             <SideMenu />
-            <Grid item xs={12} md={10} bgcolor={'secondary'} padding={0}>
-              <div className="px-4">{children}</div>
+            <Grid xs={12} md={10} bgcolor={'secondary'} padding={0} container>
+              <div className="px-4 w-full flex">{children}</div>
             </Grid>
           </Grid>
         </main>

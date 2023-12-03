@@ -38,3 +38,7 @@ a {
     /* background: #353535; */
   }
 }
+
+.MuiInputBase-multiline {
+  width: 100%;
+}
