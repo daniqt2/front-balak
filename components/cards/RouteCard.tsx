@@ -1,11 +1,4 @@
-import {
-  Avatar,
-  Card,
-  CardContent,
-  CardHeader,
-  CardMedia,
-  Typography,
-} from '@mui/material';
+import { Avatar, Card } from 'flowbite-react';
 
 import { ChipGroup } from '../sets/ChipGroup';
 import { EColor } from '../../constants/color.constants';
@@ -21,34 +14,21 @@ export const RouteCard: React.FC<IPropsBkCard> = ({ route }) => {
     { label: 'road', color: EColor.primary },
     { label: '200km', color: EColor.warning },
   ];
-  // className=" w-3/4 md:w-96"
   return (
-    <div className=" cursor-pointer hover:px-1 hover:bg-primay mx-auto">
-      <Card
-        sx={{
-          ':hover': {
-            boxShadow: 20, // theme.shadows[20]
-          },
-        }}
-      >
-        <CardHeader
-          avatar={<Avatar aria-label="recipe">R</Avatar>}
-          title={route.ownerUser}
-          subheader={route.date}
-        />
-        <CardMedia
-          component="img"
-          height="194"
-          image={route.image}
-          alt="Paella dish"
-        />
-        <CardContent>
-          <ChipGroup chips={chipData} />
-          <Typography variant="body2" color="text.secondary">
-            {route.description}
-          </Typography>
-        </CardContent>
-      </Card>
-    </div>
+    <Card
+      className="cursor-pointer max-w-xl hover:bg-slate-100"
+      imgAlt="route-map"
+      imgSrc={route.image}
+    >
+      <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        Ruta dominguera
+      </h5>
+      <div className="flex">
+        <Avatar rounded size="xs"></Avatar>
+        <p className="text-secondary ml-3">{route.ownerUser}</p>
+      </div>
+      <ChipGroup chips={chipData} />
+      <p className="text-secondary">{route.description}</p>
+    </Card>
   );
 };

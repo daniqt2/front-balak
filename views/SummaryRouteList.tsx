@@ -18,12 +18,10 @@ export const SummaryRouteList: React.FC<{}> = () => {
     mockRoute,
   ];
   return (
-    <Grid container spacing={4} padding={0} overflow={'scroll'}>
+    <div>
       {d.map((r) => (
-        <Grid key={`card-${r.id}`} item xs={12} md={4}>
-          <RouteSummary route={r} />
-        </Grid>
+        <RouteSummary route={r} key={r.id} />
       ))}
-    </Grid>
+    </div>
   );
 };

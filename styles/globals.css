@@ -18,6 +18,7 @@ body {
     Droid Sans,
     Helvetica Neue,
     sans-serif;
+  height: 100vh;
 }
 
 a {
@@ -41,4 +42,12 @@ a {
 
 .MuiInputBase-multiline {
   width: 100%;
+}
+
+#__next {
+  height: 100vh;
+}
+
+.overflow-scroll {
+  overflow: scroll;
 }

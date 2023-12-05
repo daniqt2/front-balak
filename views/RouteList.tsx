@@ -17,12 +17,12 @@ export const RouteList: React.FC<{}> = () => {
     mockRoute,
   ];
   return (
-    <Grid container spacing={4} padding={0} overflow={'scroll'}>
-      {d.map((r) => (
-        <Grid key={`card-${r.id}`} item xs={12} md={4}>
-          <RouteCard route={r} />
-        </Grid>
-      ))}
-    </Grid>
+    <div className="p-4">
+      <div className="grid grid-cols-4 gap-4">
+        {d.map((r) => (
+          <RouteCard route={r} key={`card-${r.id}`} />
+        ))}
+      </div>
+    </div>
   );
 };
