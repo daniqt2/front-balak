@@ -30,16 +30,6 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    /* background: #353535; */
-  }
-}
-
 .MuiInputBase-multiline {
   width: 100%;
 }
@@ -50,4 +40,17 @@ a {
 
 .overflow-scroll {
   overflow: scroll;
+}
+
+/* cols */
+
+@media (max-width: 1000px) {
+  .cutom-grid {
+    @apply grid-cols-1;
+  }
+}
+@media (min-width: 1001px) {
+  .cutom-grid {
+    @apply grid-cols-4;
+  }
 }

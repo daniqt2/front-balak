@@ -10,7 +10,7 @@ interface IPropsChipGroup {
 
 export const ChipGroup: React.FC<IPropsChipGroup> = ({ chips }) => {
   return (
-    <div className="flex my-2">
+    <div className="flex">
       {chips?.map((chip, idx) => (
         <div key={`chip-${idx}`} className="mr-2">
           <ChipRoute label={chip.label} color={chip.color} />

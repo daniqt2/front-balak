@@ -1,9 +1,8 @@
-import { Avatar, Card } from 'flowbite-react';
-
 import { ChipGroup } from '../sets/ChipGroup';
 import { EColor } from '../../constants/color.constants';
 import { IRoute } from '../../models/route.interface';
 import React from 'react';
+import { Avatar, Card } from 'flowbite-react';
 
 interface IPropsBkCard {
   route: IRoute;
@@ -15,20 +14,18 @@ export const RouteCard: React.FC<IPropsBkCard> = ({ route }) => {
     { label: '200km', color: EColor.warning },
   ];
   return (
-    <Card
-      className="cursor-pointer max-w-xl hover:bg-slate-100"
-      imgAlt="route-map"
-      imgSrc={route.image}
-    >
-      <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        Ruta dominguera
-      </h5>
+    <Card imgSrc={route.image}>
+      <p className=" font-light text-xl">Ruta dominguera</p>
       <div className="flex">
         <Avatar rounded size="xs"></Avatar>
-        <p className="text-secondary ml-3">{route.ownerUser}</p>
+        <p className="text-secondary ml-3 text-sm self-center">
+          {route.ownerUser}
+        </p>
       </div>
+      <p className="text-grayLight text-sm font-light line-clamp-2">
+        {route.description}
+      </p>
       <ChipGroup chips={chipData} />
-      <p className="text-secondary">{route.description}</p>
     </Card>
   );
 };

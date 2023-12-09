@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         primary: '#B4C451',
         secondary: '#353535',
+        grayLight: '#747474',
         bkOrange: '#ECA74B',
         bkPink: '#c95956',
         bkPrimary: '#10196',
@@ -23,6 +24,22 @@ module.exports = {
         bkBluelight: '#354B58',
         bkBlue: '#263844',
       },
+    },
+    screens: {
+      sm: '640px',
+      // => @media (min-width: 640px) { ... }
+
+      md: '768px',
+      // => @media (min-width: 768px) { ... }
+
+      lg: '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      xl: '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
     },
   },
   plugins: [require('flowbite/plugin')],
