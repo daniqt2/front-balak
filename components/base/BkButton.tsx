@@ -1,14 +1,15 @@
 import * as React from 'react';
 
-import Button, { ButtonTypeMap } from '@mui/material/Button';
+import Button from '@mui/material/Button';
 
-interface IPropsBkButton extends ButtonTypeMap {
+interface IPropsBkButton {
   text: string;
+  onClick: () => void;
 }
 
-const BkButton: React.FC<IPropsBkButton> = ({ text }) => {
+const BkButton: React.FC<IPropsBkButton> = ({ text, onClick }) => {
   return (
-    <Button variant="contained" color="primary">
+    <Button variant="contained" color="primary" onClick={onClick}>
       {text}
     </Button>
   );

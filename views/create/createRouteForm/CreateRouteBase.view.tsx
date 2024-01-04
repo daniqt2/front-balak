@@ -1,5 +1,5 @@
 import { BaseCard } from '../../../components/cards/BaseCard';
-import { CreateRouteForm } from '../../../components/form/CreateRouteForm';
+import { CreateRouteForm } from '../../../components/forms/CreateRouteForm';
 import { Grid } from '@mui/material';
 import React from 'react';
 

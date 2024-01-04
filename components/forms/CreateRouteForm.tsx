@@ -1,5 +1,6 @@
 import { Datepicker, FloatingLabel } from 'flowbite-react';
-import { InputBase, TextField } from '@mui/material';
+
+import { TextField } from '@mui/material';
 
 export const CreateRouteForm: React.FC<{}> = () => {
   return (
